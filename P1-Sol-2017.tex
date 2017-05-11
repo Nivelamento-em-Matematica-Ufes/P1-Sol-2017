@@ -1,11 +1,11 @@
 \documentclass[12pt]{article}
-\usepackage{sbc-template}
 \usepackage{graphicx,url}
 \usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{amssymb}
 \definecolor{verde}{rgb}{0,0.5,0}
 \title{PROVA 1}
 
@@ -30,20 +30,19 @@ $+(x+1)+(x-2)=4$\\
 $2x=5$\\
 $x=\frac{5}{2}$\\
 
-Portanto $x=- \frac{3}{2}$ ou $x=\frac{5}{2}$}.\\
+Portanto $x=- \frac{3}{2}$ ou $x=\frac{5}{2}$.\\
 \end{itemize}
-\\
 
 {\bf b) } 
 Estudando os sinais de cada parcela temos:
 \begin{itemize}
 \item $x\geq0$\\
-\item $2x-1\geq0 \Leftrightarrow x\geq\frac{1}{2}\\
+\item $2x-1\geq0 \Leftrightarrow x\geq\frac{1}{2}$\\
 \item $(x-2)^3\geq0 \Leftrightarrow x-2\geq0 \Leftrightarrow x\geq2$\\
 \item $-3x+\geq0 \Leftrightarrow x\leq\frac{2}{3}$\\
-\item $(x-1)^2\geq0$ $\Rightarrow x\geq0 para todo $x\in\mathbb{R}$\\
+\item $(x-1)^2\geq0 \Rightarrow x\geq 0$ para todo $x\in\mathbb{R}$\\
 \end{itemize}
-Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in(-\infty,0]$ ou $x\in[\frac{2}{3},2].\\
+Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in(-\infty,0]$ ou $x\in[\frac{2}{3},2]$.\\
 
 {\bf c) } 
 Devemos ter $|2x+1|\geq|1-x|$, então:
@@ -56,7 +55,7 @@ $+(2x+1)\geq1-x$\\
 $x\geq0$\\
 \item Devemos ter também $|2x+1|\neq0 \Rightarrow x\neq-\frac{1}{2}$ e $1-x\neq0 \Rightarrow x\neq 1$.\\
 \end{itemize}
-Portanto $x\in[0,1)$ ou $x\in(1,+\infty)\\
+Portanto $x\in[0,1)$ ou $x\in(1,+\infty)$\\
 \\
 \\
 
@@ -81,16 +80,19 @@ $D_f=\mathbb{R}$
 {\bf b) } 
 \begin{itemize}
 \item se $x<1$ temos\\
-$f(x)=-(x-1)-(x-2)\\
+$f(x)=-(x-1)-(x-2)$\\
 $f(x)=-2x+3$\\
 \item se $1\leq x<2$ temos\\
-$f(x)=+(x-1)-(x-2)\\
+$f(x)=+(x-1)-(x-2)$\\
 $f(x)=1$
 \item se $x\geq2$ temos\\
-$f(x)=+(x-1)+(x-2)\\
+$f(x)=+(x-1)+(x-2)$\\
 $f(x)=2x-3$\\
 \end{itemize}
 Logo,\\
+
+%TODO corrigir isso aqui 
+\begin{comment}
 $
 f(x) = \left\{
 \begin{array}{rcl}
@@ -100,8 +102,8 @@ f(x) = \left\{
 \end{array}
 \right.
 $\\
-\\
-\\
+\end{comment}
+
 
 {\bf QUESTÃO 4}\\
 
@@ -119,4 +121,4 @@ $\\
 \\
 {\bf b) } Seja $x$ a idade que a pessoa começa a trabalhar e $f(x)$ a idade que a pessoa tem o direito de se aposentar. Sabemos que a soma da idade que a pessoa tem o direito de se aposentar com o tempo de serviço deve ser igual a 95.\\
 Sabemos que o tempo se serviço é dado pela idade da pessoa menos a idade que ela começou a trabalhar, então $f(x)+(f(x)-x)=95\Rightarrow f(x)=\frac{1}{2}(95+x).$
-\\
+\end{document}
