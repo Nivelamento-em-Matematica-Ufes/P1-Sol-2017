@@ -1,25 +1,57 @@
-\documentclass[12pt]{article}
-\usepackage{graphicx,url}
-\usepackage[brazil]{babel}   
-\usepackage[utf8]{inputenc}  
-\usepackage{verbatim}
-\usepackage{listings}
-\usepackage{xcolor}
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                  PREAMBULO
+%
+%a4paper = 21cm por 29,7cm; 1in= 2,54cm; 1cm= 28pt
+%
+%
 \usepackage{amssymb}
-\definecolor{verde}{rgb}{0,0.5,0}
-\title{PROVA 1}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{graphicx}
+%\usepackage{marvosym}
+\usepackage[latin1]{inputenc}
+\usepackage{latexsym}
+\usepackage{verbatim}
+%\usepackage[brazil]{babel}
+%\renewcommand{\baselinestretch}{1.5}
+%
+\setlength{\hoffset}{-1in}      		%+1in margem esquerda
+\setlength{\voffset}{-1in}      		%+1in margem superior
+\setlength{\topmargin}{1cm}     		%dist cx cabeçalho 'a margem superior
+\setlength{\headheight}{0cm}       %altura da cx cabeçalho
+\setlength{\headsep}{0cm}       		%dist cx cabeçalho 'a cx texto
+\setlength{\textwidth}{18cm}        %largura da cx texto
+\setlength{\textheight}{29cm}     %altura da cx texto
+\setlength{\oddsidemargin}{1.5cm}   	%dist margem esquerda 'a cx texto das pg                                %impares
+\setlength{\evensidemargin}{3.5cm}  %dist margem esquerda 'a cx texto das pg                                %pares
+\setlength{\marginparwidth}{0in}    %largura da cx margem
+\setlength{\marginparsep}{0in}      %dist da cx margem 'a cx texto
+%\setlength{\paperwidth}{30cm}      %largura do papel
+%\setlength{\paperheight}{29,7cm}   %altura do papel
+\setlength{\footskip}{28pt}         %dist da cx margem 'a cx texto
+%
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\sen}{\mbox{sen}}
+\newcommand{\fim}{\vspace{-15pt}\par \hfill \rule{5pt}{8pt}\par}
+\newcommand{\der}[2]{\frac{\partial #1}{\partial #2}(x,y)}
+\newcommand{\ds}{\displaystyle}
+%
+\begin{document}
+\vspace{5mm}
+\centering{\Large UFES - CCE - DMAT - {\bf Prova 1 - Solução}}\\[3mm]
+ {\large Projeto de Ensino Nivelamento em Matemática - PROGRAD - 05/05/17}\\[3mm]
+{\bf Leia a prova  com atenção e justifique todas as respostas.}
 
-\begin{document} 
-
-\maketitle
+\vspace{5mm}
 \begin{enumerate}
-
-
-\item
- \begin{enumerate}
-  %TODO ver como deixar só um parêntese e como deixar em negrito
- \item
-  \begin{itemize}
+	\item  Resolva a equação e as inequações em $\RR$.
+\begin{enumerate}
+\vspace{5mm}
+\item {\bf (1,0)} $\ds |x+1|+|x-2|=4$
+\vspace{3mm}
+\begin{itemize}
   \item Se $x\in(-\infty,-1)$ temos:\\
   $-(x+1)-(x-2)=4$\\
   $-2x=3$\\
@@ -34,8 +66,9 @@
   $x=\frac{5}{2}$\\
   Portanto $x=- \frac{3}{2}$ ou $x=\frac{5}{2}$.\\
   \end{itemize}
-
- \item Estudando os sinais de cada parcela temos:
+\item {\bf (1,0)} $\ds \frac{x(2x-1)(x-2)^3}{(-3x+2)(x-1)^2}\geq 0  $
+\vspace{3mm}
+Estudando os sinais de cada parcela temos:
   \begin{itemize}
    \item $x\geq0$\\
    \item $2x-1\geq0 \Leftrightarrow x\geq\frac{1}{2}$\\
@@ -44,8 +77,8 @@
    \item $(x-1)^2\geq0 \Rightarrow x\geq 0$ para todo $x\in\mathbb{R}$\\
   \end{itemize}
  Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in(-\infty,0]$ ou $x\in[\frac{2}{3},2]$.\\
-
- \item Devemos ter $|2x+1|\geq|1-x|$, então:
+\item {\bf (1,0)} $\ds \frac{1}{|2x+1|}\leq  \frac{1}{1-x}  $
+Devemos ter $|2x+1|\geq|1-x|$, então:
   \begin{itemize}
   \item Se $x<-\frac{1}{2}$ temos:\\
   $-(2x+1)\geq1-x$\\
@@ -56,11 +89,14 @@
   \item Devemos ter também $|2x+1|\neq0 \Rightarrow x\neq-\frac{1}{2}$ e $1-x\neq0 \Rightarrow x\neq 1$.
   \end{itemize}
   Portanto $x\in[0,1)$ ou $x\in(1,+\infty)$\\
- \end{enumerate}
- 
 
-\item
- Suponhamos que $\frac{\sqrt{2}}{\sqrt{5}}+1$ seja racional.\\
+\end{enumerate}	
+\vspace{5mm}
+\item	
+	\begin{enumerate}
+	\item {\bf (1,0)} Mostre que $\ds\frac{\sqrt{2}}{\sqrt{5}}+1$ não é racional. 
+	\vspace{3mm}
+	Suponhamos que $\frac{\sqrt{2}}{\sqrt{5}}+1$ seja racional.\\
  Sabemos que $1\in\mathbb{Q}$ e que a soma de racionais é racional, logo devemos ter $\frac{\sqrt{2}}{\sqrt{5}}\in\mathbb{Q}$.\\
  Se $\frac{\sqrt{2}}{\sqrt{5}}\in\mathbb{Q}$ então $\exists p,q\in\mathbb{Z}$ onde $p$ e $q$ não tem fatores em comum e $\frac{p}{q}=\frac{\sqrt{2}}{\sqrt{5}}$.\\
  Daí temos que $\frac{p^2}{q^2}=\frac{2}{5}\Rightarrow5p^2=2q^2$.\\
@@ -68,10 +104,15 @@
  Seja então $p=2r$, temos que $5.(2r)^2=2q^2\Rightarrow5.2r^2=q^2$.\\
  Daí vemos que $q^2$ é par e consequentemente $q$ é par, o que é um absurso pois $p$ e $q$ não tem fatores em comum.\\
  Logo $\frac{\sqrt{2}}{\sqrt{5}}\not\in\mathbb{Q}$ e consequentemente $\frac{\sqrt{2}}{\sqrt{5}}+1$ não é racional.
+	\item {\bf (1,0)} Esboce uma figura que represente um segmento de reta de medida $\sqrt{7}$. (Construir a partir da unidade como em aula). 
+	\end{enumerate}
+	
+\vspace{5mm}
 
-
-\item
- \begin{enumerate}
+\item Seja $f(x)=|x-1|+|x-2|$.
+\begin{enumerate}
+\item {\bf (0,5)} Dê o domínio de $f$.
+\begin{enumerate}
  %TODO ver como deixar só um parêntese e como deixar em negrito
  \item $D_f=\mathbb{R}$
 
@@ -102,20 +143,38 @@
   $\\
   \end{comment}
  \end{enumerate}
+\item {\bf (0,5)} Escreva uma expressão para $f$ sem usar o valor absoluto. (Sugestão: dividir o domínio em intervalos apropriados).
+\item  {\bf (0,5)} Esboce o gráfico de $f$.
+\end{enumerate}
 
-\item
- \begin{enumerate}
+\vspace{5mm}
+\item Responda Verdadeiro ou Falso nas sentenças abaixo, justificando suas respostas.
+\begin{enumerate}
+
+\item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^2<y^2$.
+\begin{enumerate}
  \item Falso. Seja $x=-2$ e $y=-1$, temos que $x<y$. Mas $x^2=4$ e $y^2=1$, logo $y^2<x^2$.
  \item Verdadeiro.
  \item Falso. Seja $x=\frac{1}{4}$. Temos que $\sqrt{\frac{1}{4}}=\frac{1}{2}$ e $\frac{1}{4}\leq\sqrt{\frac{1}{4}}$.
  \end{enumerate}
+\vspace{3mm}
+\item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^3<y^3$.
+\vspace{3mm}
+\item{\bf (0,5)} Se $x\geq 0$ então $x\geq \sqrt{x}$. 
 
+\end{enumerate}
 
-\item
- \begin{enumerate}
+\vspace{5mm}
+\item Considere a chamada "regra 95" para a previdência.  Nesta regra o trabalhador teria direito à aposentadoria quando a soma de sua idade com o número de anos de serviço atingisse $95$. 
+\begin{enumerate}
  \item Se $x$ é a idade da pessoa temos que $x+(x-25)=95\Rightarrow x=60$. Portanto a pessoa tem direito de se aposentar aos $60$ anos.
  \item Seja $x$ a idade que a pessoa começa a trabalhar e $f(x)$ a idade que a pessoa tem o direito de se aposentar. Sabemos que a soma da idade que a pessoa tem o direito de se aposentar com o tempo de serviço deve ser igual a 95.
  Sabemos que o tempo se serviço é dado pela idade da pessoa menos a idade que ela começou a trabalhar, então $f(x)+(f(x)-x)=95\Rightarrow f(x)=\frac{1}{2}(95+x).$
  \end{enumerate}
+\begin{enumerate}
+\item {\bf (0,5)} Baseado na regra $95$ quem começou a trabalhar aos $25$ anos teria direito à aposentadoria com que idade?
+\item {\bf (1,0)} Sendo $x$ a idade com que uma pessoa começa a trabalhar, econtre a idade com que ele tem direito à aposentadoria $f(x)$.
+\item{\bf (0,5)}  Esboce o gráfico de $f$, considerando que a idade é um número real não negativo e que é proibido trabalhar antes dos $16$ anos.
+\end{enumerate}
 \end{enumerate}
 \end{document}
