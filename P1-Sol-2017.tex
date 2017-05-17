@@ -5,14 +5,16 @@
 %
 %
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{multicol}
 \usepackage{amsthm}
 \usepackage{graphicx}
 %\usepackage{marvosym}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 \usepackage{verbatim}
-%\usepackage[brazil]{babel}
+\usepackage[brazil]{babel}
+\usepackage{enumerate}
 %\renewcommand{\baselinestretch}{1.5}
 %
 \setlength{\hoffset}{-1in}      		%+1in margem esquerda
@@ -41,42 +43,58 @@
 \begin{document}
 \vspace{5mm}
 \centering{\Large UFES - CCE - DMAT - {\bf Prova 1 - Solução}}\\[3mm]
- {\large Projeto de Ensino Nivelamento em Matemática - PROGRAD - 05/05/17}\\[3mm]
+{\large Projeto de Ensino Nivelamento em Matemática - PROGRAD - 05/05/17}\\[3mm]
 {\bf Leia a prova  com atenção e justifique todas as respostas.}
 
 \vspace{5mm}
+
 \begin{enumerate}
-	\item  Resolva a equação e as inequações em $\RR$.
-\begin{enumerate}
-\vspace{5mm}
-\item {\bf (1,0)} $\ds |x+1|+|x-2|=4$
-\vspace{3mm}
-\begin{itemize}
-  \item Se $x\in(-\infty,-1)$ temos:\\
-  $-(x+1)-(x-2)=4$\\
+\item  Resolva a equação e as inequações em $\RR$.
+ \begin{enumerate}
+ \item {\bf (1,0)} $\ds |x+1|+|x-2|=4$\\
+ Usando a definição de módulo temos:\\
+	 
+  $ |x+1| =  \left\{
+\begin{array}{ll}
+      x+1 & \mbox{se }  x \geq -1 \\
+      -x -1 & \mbox{se } x < -1 \\
+\end{array} 
+ \right. $ e $ |x-2| =  \left\{
+\begin{array}{ll}
+      x - 2 & \mbox{se }  x \geq 2 \\
+      -x + 2 & \mbox{se } x < 2 \\
+\end{array} 
+ \right. $\\
+ 
+
+ \begin{itemize}
+  \item Se $x<-1$ temos:\\
+  $(-x-1)+(-x+2)=4$\\
   $-2x=3$\\
-  $x=- \frac{3}{2}$\\
-  \item Se $x\in[-1,2)$ temos:\\
-  $+(x+1)-(x-2)=4$\\
+  $x= -\frac{3}{2}$\\
+  \item Se $-1\leq x < 2$ temos:\\
+  $(x+1)+(-x+2)=4$\\
   $3=4$\\
-  Portanto $\not\exists x\in \mathbb{R}$ nesse intervalo que seja solução.\\
-  \item Se  $x\in[2,+\infty)$ temos:\\
-  $+(x+1)+(x-2)=4$\\
+  Portanto nenhum número desse intervalo satisfaz a equação.\\
+  \item Se  $2 \leq x$ temos:\\
+  $(x+1)+(x-2)=4$\\
   $2x=5$\\
   $x=\frac{5}{2}$\\
-  Portanto $x=- \frac{3}{2}$ ou $x=\frac{5}{2}$.\\
   \end{itemize}
-\item {\bf (1,0)} $\ds \frac{x(2x-1)(x-2)^3}{(-3x+2)(x-1)^2}\geq 0  $
-\vspace{3mm}
-Estudando os sinais de cada parcela temos:
+  Por fim concluímos que $x=- \frac{3}{2}$ ou $x=\frac{5}{2}$.\\
+  
+ \item {\bf (1,0)} $\ds \frac{x(2x-1)(x-2)^3}{(-3x+2)(x-1)^2}\geq 0  $\\
+ \vspace{3mm}
+ Estudando os sinais de cada parcela temos:
   \begin{itemize}
    \item $x\geq0$\\
    \item $2x-1\geq0 \Leftrightarrow x\geq\frac{1}{2}$\\
    \item $(x-2)^3\geq0 \Leftrightarrow x-2\geq0 \Leftrightarrow x\geq2$\\
-   \item $-3x+\geq0 \Leftrightarrow x\leq\frac{2}{3}$\\
-   \item $(x-1)^2\geq0 \Rightarrow x\geq 0$ para todo $x\in\mathbb{R}$\\
+   \item $-3x+2\geq0 \Leftrightarrow x\leq\frac{2}{3}$\\
+   \item $(x-1)^2\geq0 \Leftrightarrow x\in \RR \mbox{, e } (x-1)^2 = 0 \mbox{ quando } x = 1$\\
   \end{itemize}
  Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in(-\infty,0]$ ou $x\in[\frac{2}{3},2]$.\\
+
 \item {\bf (1,0)} $\ds \frac{1}{|2x+1|}\leq  \frac{1}{1-x}  $
 Devemos ter $|2x+1|\geq|1-x|$, então:
   \begin{itemize}
