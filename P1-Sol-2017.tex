@@ -17,6 +17,7 @@
 \usepackage{enumerate}
 %\renewcommand{\baselinestretch}{1.5}
 %
+\begin{comment}
 \setlength{\hoffset}{-1in}      		%+1in margem esquerda
 \setlength{\voffset}{-1in}      		%+1in margem superior
 \setlength{\topmargin}{1cm}     		%dist cx cabeçalho 'a margem superior
@@ -31,6 +32,9 @@
 %\setlength{\paperwidth}{30cm}      %largura do papel
 %\setlength{\paperheight}{29,7cm}   %altura do papel
 \setlength{\footskip}{28pt}         %dist da cx margem 'a cx texto
+\end{comment}
+
+
 %
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\ZZ}{\mathbb{Z}}
@@ -88,31 +92,34 @@
  Estudando os sinais de cada parcela temos:
   \begin{itemize}
    \item $x\geq0$\\
-   \item $2x-1\geq0 \Leftrightarrow x\geq\frac{1}{2}$\\
-   \item $(x-2)^3\geq0 \Leftrightarrow x-2\geq0 \Leftrightarrow x\geq2$\\
-   \item $-3x+2\geq0 \Leftrightarrow x\leq\frac{2}{3}$\\
-   \item $(x-1)^2\geq0 \Leftrightarrow x\in \RR \mbox{, e } (x-1)^2 = 0 \mbox{ quando } x = 1$\\
+   \item $2x-1 \geq 0 \Leftrightarrow x\geq\frac{1}{2}$\\
+   \item $(x-2)^3 \geq 0 \Leftrightarrow x-2\geq0 \Leftrightarrow x\geq2$\\
+   \item $-3x+2 \geq 0 \Leftrightarrow x\leq\frac{2}{3}$\\
+   \item $(x-1)^2 \geq 0 \Leftrightarrow x\in \RR \mbox{, e } (x-1)^2 = 0 \mbox{ quando } x = 1$\\
   \end{itemize}
- Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in(-\infty,0]$ ou $x\in[\frac{2}{3},2]$.\\
+ Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in\left[0,\frac{1}{2}\right]\cup\left(\frac{2}{3},1\right)\cup\left(1, 2\right]$.\\
+%TODO colocar imagem com legenda
+ \begin{center}
+ \includegraphics[scale=2]{Q1b.png}
+ \end{center}
 
-\item {\bf (1,0)} $\ds \frac{1}{|2x+1|}\leq  \frac{1}{1-x}  $
-Devemos ter $|2x+1|\geq|1-x|$, então:
-  \begin{itemize}
-  \item Se $x<-\frac{1}{2}$ temos:\\
-  $-(2x+1)\geq1-x$\\
-  $x\leq-2$\\
-  \item Se $x>-\frac{1}{2}$ temos:\\
-  $+(2x+1)\geq1-x$\\
-  $x\geq0$\\
-  \item Devemos ter também $|2x+1|\neq0 \Rightarrow x\neq-\frac{1}{2}$ e $1-x\neq0 \Rightarrow x\neq 1$.
-  \end{itemize}
-  Portanto $x\in[0,1)$ ou $x\in(1,+\infty)$\\
 
+\item {\bf (1,0)} $\ds \frac{1}{|2x+1|}\leq  \frac{1}{1-x}$\\
+Primeiro reformulamos a inequação:
+ $$\frac{1}{|2x+1|} - \frac{1}{1-x} \leq 0$$
+ $$\frac{1-x - |2x+1|}{|2x+1|(1-x)} \leq 0$$
+Usando a definição do módulo: $ 1-x - |2x+1| =  \left\{
+\begin{array}{ll}
+      x+2 & \mbox{se }  x < -\frac{1}{2} \\
+      -3x & \mbox{se } x \geq -\frac{1}{2} \\
+\end{array} 
+ \right.$ Daí que esta expressão é positiva se, e somente se, $-2 \leq x \leq 0$. Então podemos fazer o estudo do sinal.\\
+ %TODO colocar a figura
 \end{enumerate}	
 \vspace{5mm}
 \item	
 	\begin{enumerate}
-	\item {\bf (1,0)} Mostre que $\ds\frac{\sqrt{2}}{\sqrt{5}}+1$ não é racional. 
+	\item {\bf (1,0)} Mostre que $\ds\frac{\sqrt{2}}{\sqrt{5}}+1$ não é racional.\\ 
 	\vspace{3mm}
 	Suponhamos que $\frac{\sqrt{2}}{\sqrt{5}}+1$ seja racional.\\
  Sabemos que $1\in\mathbb{Q}$ e que a soma de racionais é racional, logo devemos ter $\frac{\sqrt{2}}{\sqrt{5}}\in\mathbb{Q}$.\\
@@ -129,13 +136,12 @@ Devemos ter $|2x+1|\geq|1-x|$, então:
 
 \item Seja $f(x)=|x-1|+|x-2|$.
 \begin{enumerate}
-\item {\bf (0,5)} Dê o domínio de $f$.
-\begin{enumerate}
+\item {\bf (0,5)} Dê o domínio de $f$.\\
  %TODO ver como deixar só um parêntese e como deixar em negrito
- \item $D_f=\mathbb{R}$
+ Como os módulos estão definidos para todos os reais $\mathrm{Dom}(f) = \RR$.
 
- \item 
-  \begin{itemize}
+\item {\bf (0,5)} Escreva uma expressão para $f$ sem usar o valor absoluto. (Sugestão: dividir o domínio em intervalos apropriados).\\
+ \begin{itemize}
   \item se $x<1$ temos\\
   $f(x)=-(x-1)-(x-2)$\\
   $f(x)=-2x+3$\\
@@ -146,52 +152,97 @@ Devemos ter $|2x+1|\geq|1-x|$, então:
   $f(x)=+(x-1)+(x-2)$\\
   $f(x)=2x-3$\\
   \end{itemize}
- Logo,\\
+ Logo, $ f(x) =  \left\{
+\begin{array}{ll}
+      -2x+3 & \mbox{se }  x < 1 \\
+      1 & \mbox{se } 1 \leq x < 2\\
+      2x-3 & \mbox{se } 2 \leq x
+\end{array} 
+ \right. $\\
 
- %TODO corrigir isso aqui 
-  \begin{comment}
-  $
-  f(x) = \left\{
-  \begin{array}{rcl}
-  -2x+31,& \mbox{se} & x<1\\
-  1, & \mbox{se} & 1\leqx<2\\
-  2x-3, & \mbox{se} & x\geq 2
-  \end{array}
-  \right.
-  $\\
-  \end{comment}
- \end{enumerate}
-\item {\bf (0,5)} Escreva uma expressão para $f$ sem usar o valor absoluto. (Sugestão: dividir o domínio em intervalos apropriados).
 \item  {\bf (0,5)} Esboce o gráfico de $f$.
+%TODO colocar a figura.
 \end{enumerate}
 
 \vspace{5mm}
 \item Responda Verdadeiro ou Falso nas sentenças abaixo, justificando suas respostas.
 \begin{enumerate}
 
-\item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^2<y^2$.
-\begin{enumerate}
- \item Falso. Seja $x=-2$ e $y=-1$, temos que $x<y$. Mas $x^2=4$ e $y^2=1$, logo $y^2<x^2$.
- \item Verdadeiro.
- \item Falso. Seja $x=\frac{1}{4}$. Temos que $\sqrt{\frac{1}{4}}=\frac{1}{2}$ e $\frac{1}{4}\leq\sqrt{\frac{1}{4}}$.
+\item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^2<y^2$.\\
+ Falso. Seja $x=-2$ e $y=-1$, temos que $x<y$. Mas $x^2=4$ e $y^2=1$, logo $y^2<x^2$.
+\vspace{3mm}
+\item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^3<y^3$.\\
+Verdadeiro.
+Avaliando os possíveis casos de $x<y$:
+
+ \begin{enumerate}
+ %TODO Melhorar solução?
+ %TODO Representar o movimento dos pontos na reta em cada caso?
+ \item $x<y<0:$\\
+ $x<0$\\
+ $xx>x0$\\
+ $x^2>0$\\
+ $\mbox{Analogamente, } y^2>0$\\
+ $x<0$\\
+ $xy>0y$\\
+ $xy>0$\\
+ $x<y$\\
+ $xx^2<yx^2$\\
+ $x^3<x^2y$\\
+ $x<y$\\
+ $xy^2<yy^2$\\
+ $xy^2<y^3$\\
+ $x<y$\\
+ $x(xy)<y(xy)$\\
+ $x^2y<xy^2$\\
+ $x^3<x^2y<xy^2<y^3$\\
+ $x^3<y^3$\\
+ 
+ 
+ \item $y=0 \mbox{ e } x<0:$\\
+ $y^3=0$\\
+ $xx>x0$\\
+ $x^2>0$\\
+ $xx^2<0x$\\
+ $x^3<0$\\
+ $x^3<y^3$\\
+ 
+ \item $x<0 \mbox{ e } y<0:$\\
+ $x^2>0 \mbox{ e } y^2>0$\\
+ $xx^2<0 \mbox{ e } yy^2>0$\\
+ $x^3<0<y^3$\\
+ $x^3<y^3$
+ 
+ \item $x=0 \mbox{ e } 0<y:$\\
+ $x^3=0$\\
+ $0y<yy$\\
+ $0<y^2$\\
+ $0y<yy^2$\\
+ $0<y^3$\\
+ $x^3<y^3$\\
+ 
+ \item $0<x<y:$\\
+ Análogo ao caso 1.\\
+ 
+ Concluímos que se $x<y$, então $x^3<y^3$\\
+ 
  \end{enumerate}
 \vspace{3mm}
-\item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^3<y^3$.
-\vspace{3mm}
-\item{\bf (0,5)} Se $x\geq 0$ então $x\geq \sqrt{x}$. 
-
+\item{\bf (0,5)} Se $x\geq 0$ então $x\geq \sqrt{x}$.\\
+Falso. Seja $x=\frac{1}{4}$. Temos que $\sqrt{\frac{1}{4}}=\frac{1}{2}$ e $\frac{1}{4}\leq\sqrt{\frac{1}{4}}$.
 \end{enumerate}
 
 \vspace{5mm}
 \item Considere a chamada "regra 95" para a previdência.  Nesta regra o trabalhador teria direito à aposentadoria quando a soma de sua idade com o número de anos de serviço atingisse $95$. 
+
 \begin{enumerate}
- \item Se $x$ é a idade da pessoa temos que $x+(x-25)=95\Rightarrow x=60$. Portanto a pessoa tem direito de se aposentar aos $60$ anos.
- \item Seja $x$ a idade que a pessoa começa a trabalhar e $f(x)$ a idade que a pessoa tem o direito de se aposentar. Sabemos que a soma da idade que a pessoa tem o direito de se aposentar com o tempo de serviço deve ser igual a 95.
+\item {\bf (0,5)} Baseado na regra $95$ quem começou a trabalhar aos $25$ anos teria direito à aposentadoria com que idade?\\
+\vspace{3mm}
+Se $x$ é a idade da pessoa temos que $x+(x-25)=95\Rightarrow x=60$. Portanto a pessoa tem direito de se aposentar aos $60$ anos.
+\item {\bf (1,0)} Sendo $x$ a idade com que uma pessoa começa a trabalhar, econtre a idade com que ele tem direito à aposentadoria $f(x)$.\\
+\vspace{3mm}
+Seja $x$ a idade que a pessoa começa a trabalhar e $f(x)$ a idade que a pessoa tem o direito de se aposentar. Sabemos que a soma da idade que a pessoa tem o direito de se aposentar com o tempo de serviço deve ser igual a 95.
  Sabemos que o tempo se serviço é dado pela idade da pessoa menos a idade que ela começou a trabalhar, então $f(x)+(f(x)-x)=95\Rightarrow f(x)=\frac{1}{2}(95+x).$
- \end{enumerate}
-\begin{enumerate}
-\item {\bf (0,5)} Baseado na regra $95$ quem começou a trabalhar aos $25$ anos teria direito à aposentadoria com que idade?
-\item {\bf (1,0)} Sendo $x$ a idade com que uma pessoa começa a trabalhar, econtre a idade com que ele tem direito à aposentadoria $f(x)$.
 \item{\bf (0,5)}  Esboce o gráfico de $f$, considerando que a idade é um número real não negativo e que é proibido trabalhar antes dos $16$ anos.
 \end{enumerate}
 \end{enumerate}
