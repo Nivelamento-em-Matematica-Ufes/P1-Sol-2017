@@ -57,18 +57,20 @@
  \begin{enumerate}
  \item {\bf (1,0)} $\ds |x+1|+|x-2|=4$\\
  Usando a definição de módulo temos:\\
-	 
-  $ |x+1| =  \left\{
+  $$ |x+1| =  \left\{
 \begin{array}{ll}
       x+1 & \mbox{se }  x \geq -1 \\
       -x -1 & \mbox{se } x < -1 \\
 \end{array} 
- \right. $ e $ |x-2| =  \left\{
+ \right. $$
+ \begin{center} e \end{center}
+ $$ |x-2| =  \left\{
 \begin{array}{ll}
       x - 2 & \mbox{se }  x \geq 2 \\
       -x + 2 & \mbox{se } x < 2 \\
 \end{array} 
- \right. $\\
+ \right. $$
+
  
 
  \begin{itemize}
@@ -98,9 +100,8 @@
    \item $(x-1)^2 \geq 0 \Leftrightarrow x\in \RR \mbox{, e } (x-1)^2 = 0 \mbox{ quando } x = 1$\\
   \end{itemize}
  Fazendo o estudo de sinais temos que a inequação acima é maior que zero quando\\ $x\in\left[0,\frac{1}{2}\right]\cup\left(\frac{2}{3},1\right)\cup\left(1, 2\right]$.\\
-%TODO colocar imagem com legenda
  \begin{center}
- \includegraphics[scale=2]{Q1b.png}
+ \includegraphics[width = 320px]{Q1b.png}
  \end{center}
 
 
@@ -113,8 +114,11 @@ Usando a definição do módulo: $ 1-x - |2x+1| =  \left\{
       x+2 & \mbox{se }  x < -\frac{1}{2} \\
       -3x & \mbox{se } x \geq -\frac{1}{2} \\
 \end{array} 
- \right.$ Daí que esta expressão é positiva se, e somente se, $-2 \leq x \leq 0$. Então podemos fazer o estudo do sinal.\\
- %TODO colocar a figura
+ \right.$ Daí que esta expressão é positiva se, e somente se, $-2 \leq x \leq 0$. Então podemos fazer o estudo do sinal\\
+ \begin{center}
+ \includegraphics[width = 320px]{Q1c.png}
+ \end{center}
+ e concluir que o conjunto-solução é $\left(-\infty, -2\right] \cup \left[0, \frac{1}{2}\right) \cup \left(\frac{1}{2}, 1\right)$.
 \end{enumerate}	
 \vspace{5mm}
 \item	
@@ -122,14 +126,18 @@ Usando a definição do módulo: $ 1-x - |2x+1| =  \left\{
 	\item {\bf (1,0)} Mostre que $\ds\frac{\sqrt{2}}{\sqrt{5}}+1$ não é racional.\\ 
 	\vspace{3mm}
 	Suponhamos que $\frac{\sqrt{2}}{\sqrt{5}}+1$ seja racional.\\
- Sabemos que $1\in\mathbb{Q}$ e que a soma de racionais é racional, logo devemos ter $\frac{\sqrt{2}}{\sqrt{5}}\in\mathbb{Q}$.\\
+ Sabemos que $1\in\mathbb{Q}$ e que a subtração de racionais é racional, logo devemos ter $\frac{\sqrt{2}}{\sqrt{5}}\in\mathbb{Q}$.\\
  Se $\frac{\sqrt{2}}{\sqrt{5}}\in\mathbb{Q}$ então $\exists p,q\in\mathbb{Z}$ onde $p$ e $q$ não tem fatores em comum e $\frac{p}{q}=\frac{\sqrt{2}}{\sqrt{5}}$.\\
  Daí temos que $\frac{p^2}{q^2}=\frac{2}{5}\Rightarrow5p^2=2q^2$.\\
  Vemos que $5p^2$ é par e como $2$ não divide $5$ temos que $p^2$ é par e consequentemente $p$ é par, pois todo quadrado de um número par é sempre par.\\
  Seja então $p=2r$, temos que $5.(2r)^2=2q^2\Rightarrow5.2r^2=q^2$.\\
  Daí vemos que $q^2$ é par e consequentemente $q$ é par, o que é um absurso pois $p$ e $q$ não tem fatores em comum.\\
  Logo $\frac{\sqrt{2}}{\sqrt{5}}\not\in\mathbb{Q}$ e consequentemente $\frac{\sqrt{2}}{\sqrt{5}}+1$ não é racional.
-	\item {\bf (1,0)} Esboce uma figura que represente um segmento de reta de medida $\sqrt{7}$. (Construir a partir da unidade como em aula). 
+	\item {\bf (1,0)} Esboce uma figura que represente um segmento de reta de medida $\sqrt{7}$. (Construir a partir da unidade como em aula).\\
+	São muitas soluções possíveis, mas entre elas:
+	\begin{center}
+	  \includegraphics[width = 320px]{Q2b.png}
+	\end{center}
 	\end{enumerate}
 	
 \vspace{5mm}
@@ -161,7 +169,9 @@ Usando a definição do módulo: $ 1-x - |2x+1| =  \left\{
  \right. $\\
 
 \item  {\bf (0,5)} Esboce o gráfico de $f$.
-%TODO colocar a figura.
+\begin{center}
+ \includegraphics[width = 320px]{Q3c.png}
+\end{center}
 \end{enumerate}
 
 \vspace{5mm}
@@ -169,67 +179,27 @@ Usando a definição do módulo: $ 1-x - |2x+1| =  \left\{
 \begin{enumerate}
 
 \item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^2<y^2$.\\
- Falso. Seja $x=-2$ e $y=-1$, temos que $x<y$. Mas $x^2=4$ e $y^2=1$, logo $y^2<x^2$.
+ Falso. Considere $x=-2$ e $y=-1$. Temos $x<y$; mas $x^2 = 4 > 1 = y^2$.
 \vspace{3mm}
 \item{\bf (0,5)} Sejam $x,y\in \RR$ então $x<y$ se, somente se $x^3<y^3$.\\
 Verdadeiro.
-Avaliando os possíveis casos de $x<y$:
+Vamos supor $x < y$ e analisar os casos possíveis:
 
- \begin{enumerate}
- %TODO Melhorar solução?
- %TODO Representar o movimento dos pontos na reta em cada caso?
- \item $x<y<0:$\\
- $x<0$\\
- $xx>x0$\\
- $x^2>0$\\
- $\mbox{Analogamente, } y^2>0$\\
- $x<0$\\
- $xy>0y$\\
- $xy>0$\\
- $x<y$\\
- $xx^2<yx^2$\\
- $x^3<x^2y$\\
- $x<y$\\
- $xy^2<yy^2$\\
- $xy^2<y^3$\\
- $x<y$\\
- $x(xy)<y(xy)$\\
- $x^2y<xy^2$\\
- $x^3<x^2y<xy^2<y^3$\\
- $x^3<y^3$\\
- 
- 
- \item $y=0 \mbox{ e } x<0:$\\
- $y^3=0$\\
- $xx>x0$\\
- $x^2>0$\\
- $xx^2<0x$\\
- $x^3<0$\\
- $x^3<y^3$\\
- 
- \item $x<0 \mbox{ e } y<0:$\\
- $x^2>0 \mbox{ e } y^2>0$\\
- $xx^2<0 \mbox{ e } yy^2>0$\\
- $x^3<0<y^3$\\
- $x^3<y^3$
- 
- \item $x=0 \mbox{ e } 0<y:$\\
- $x^3=0$\\
- $0y<yy$\\
- $0<y^2$\\
- $0y<yy^2$\\
- $0<y^3$\\
- $x^3<y^3$\\
- 
- \item $0<x<y:$\\
- Análogo ao caso 1.\\
- 
- Concluímos que se $x<y$, então $x^3<y^3$\\
- 
- \end{enumerate}
+ \begin{description}
+ \item[1º Caso:] $x$ e $y$ têm o mesmo sinal.\\
+ Primeiro parafraseamos a conclusão para facilitar a análise.\\
+ $$x^3 < y^3$$
+ $$x^3 - y^3 <0$$
+ $$(x-y)(x^2+xy+y^2) < 0$$
+ Sabemos por hipótese que $x-y < 0$. Basta então mostrar que $x^2+xy+y^2$ é um número positivo. Já sabemos de cara que $x^2, \ \ y^2 > 0$; pois $x, \ \ y \neq 0$. O $xy$ também é positivo, pois $x$ e $y$ têm o mesmo sinal. Daí que a soma $x^2+xy+y^2$ de números positivos certamente será também positiva. 
+  
+ \item[2º Caso:] $x$ e $y$ têm sinais diferentes, incluindo a possibilidade de um ser zero.\\
+ O cubo de um número negativo/nulo/positivo continua sendo negativo/nulo/positivo. Daí que a ordem não se altera nesse caso.
+ \end{description}
+ Isso prova que $x<y \Rightarrow x^3 < y^3$; mas será que $x^3 < y^3 \Rightarrow x < y$? Basta tomar a contrapositiva $x \geq y \Rightarrow x^3 \geq y^3$ e aplicar o mesmo raciocínio.
 \vspace{3mm}
 \item{\bf (0,5)} Se $x\geq 0$ então $x\geq \sqrt{x}$.\\
-Falso. Seja $x=\frac{1}{4}$. Temos que $\sqrt{\frac{1}{4}}=\frac{1}{2}$ e $\frac{1}{4}\leq\sqrt{\frac{1}{4}}$.
+Falso. Seja $x=\frac{1}{4}$. Temos que e $\frac{1}{4} < \sqrt{\frac{1}{4}} = \frac{1}{2}$.
 \end{enumerate}
 
 \vspace{5mm}
@@ -244,6 +214,9 @@ Se $x$ é a idade da pessoa temos que $x+(x-25)=95\Rightarrow x=60$. Portanto a 
 Seja $x$ a idade que a pessoa começa a trabalhar e $f(x)$ a idade que a pessoa tem o direito de se aposentar. Sabemos que a soma da idade que a pessoa tem o direito de se aposentar com o tempo de serviço deve ser igual a 95.
  Sabemos que o tempo se serviço é dado pela idade da pessoa menos a idade que ela começou a trabalhar, então $f(x)+(f(x)-x)=95\Rightarrow f(x)=\frac{1}{2}(95+x).$
 \item{\bf (0,5)}  Esboce o gráfico de $f$, considerando que a idade é um número real não negativo e que é proibido trabalhar antes dos $16$ anos.
+\begin{center}
+ \includegraphics[width = 320px]{Q5c.png}
+\end{center}
 \end{enumerate}
 \end{enumerate}
 \end{document}
